@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎙️ English Coach: No-AI Conversation Bot
 
-## Getting Started
+Este é um agente de conversação inteligente desenvolvido com **Next.js 15**, focado na prática de inglês sem o uso de APIs externas de IA. O bot utiliza lógica de **Pattern Matching** (Correspondência de Padrões) e as **Web Speech APIs** nativas para proporcionar uma experiência de chat e VoIP (voz).
 
-First, run the development server:
+## ✨ Funcionalidades
+
+- **🧠 Motor de Busca de Padrões**: Respostas baseadas em mais de 30 categorias e centenas de palavras-chave.
+- **🎤 Modo VoIP (Voz)**: Reconhecimento de fala em tempo real utilizando a Web Speech API.
+- **🔊 Text-to-Speech**: O bot responde falando com sotaque nativo americano (en-US).
+- **📖 Legendas Visuais**: Tradução instantânea via hover nos balões do bot para facilitar o aprendizado.
+- **⚡ Interface Moderna**: UI responsiva e sombreada feita com Tailwind CSS.
+
+## 🚀 Como Começar
+
+### Pré-requisitos
+
+- Node.js (versão 18 ou superior)
+- Navegador moderno (Chrome ou Edge recomendados para suporte a voz)
+
+### Instalação
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd bot-english
+```
+
+2. Instale as dependências:
+
+```bash
+npm install
+# ou
+yarn install
+```
+
+3. Inicie o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
+# ou
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tecnologias Utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js** - Framework React para produção.
+- **TypeScript** - Tipagem estática para maior segurança.
+- **Tailwind CSS** - Estilização moderna e rápida.
+- **Web Speech API** - Para reconhecimento e síntese de voz.
 
-## Learn More
+## 📂 Estrutura de Pastas
 
-To learn more about Next.js, take a look at the following resources:
+- **[data/responses.ts](data/responses.ts)**: O "cérebro" do bot. Adicione novas categorias e palavras-chave aqui.
+- **[components/EnglishPractice.tsx](components/EnglishPractice.tsx)**: O componente principal que gerencia o estado do chat e áudio.
+- **[app/page.tsx](app/page.tsx)**: Página principal de renderização.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📖 Guia de Estudo e Expansão
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Para evoluir este projeto, recomendamos estudar:
 
-## Deploy on Vercel
+- **RegEx**: Para buscas de padrões mais complexas.
+- **Web Audio API**: Para criar visualizadores de ondas sonoras no modo VoIP.
+- **Local Storage**: Para persistir o histórico de conversas no navegador.
+- **Speech Confidence**: Para validar o quão correta foi a sua pronúncia.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Contribuições
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este é um projeto de código aberto focado em educação. Sinta-se à vontade para abrir uma **Issue** ou enviar um **Pull Request** com novas frases e palavras-chave para o dicionário!
